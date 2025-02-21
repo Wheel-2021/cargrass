@@ -13,10 +13,6 @@ function remove_wp_head_actions() {
 }
 add_action('init', 'remove_wp_head_actions');
 
-// remove_action('wp_head', 'wp_generator');
-// remove_action ('wp_head', 'rsd_link');
-// remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-// remove_action( 'wp_print_styles', 'print_emoji_styles', 10 );
 function remove_cssjs_ver2( $src ) {
     if ( strpos( $src, 'ver=' ) )
         $src = remove_query_arg( 'ver', $src );
@@ -56,13 +52,6 @@ function custom_css_style() {
   }
 }
 add_action('wp_enqueue_scripts', 'custom_css_style');
-
-// function custom_css_style() {
-//   if(is_single() || is_page () || is_attachment() || is_post_type_archive() || is_date() || is_author() || is_archive() || is_search() || is_404()) {
-//    wp_enqueue_style( 'single', get_template_directory_uri() . '/css/style-editor.css', "", '20210104' );
-//   }
-// }
-// add_action( 'wp_enqueue_scripts', 'custom_css_style' );
 
 /* ---------------------------------------
 youtube responsive
@@ -191,16 +180,6 @@ function add_file_types_to_uploads($file_types) {
 }
 add_action('upload_mimes', 'add_file_types_to_uploads');
 
-// function add_file_types_to_uploads($file_types){
-
-//     $new_filetypes = array();
-//     $new_filetypes['svg'] = 'image/svg+xml';
-//     $file_types = array_merge($file_types, $new_filetypes );
-
-//     return $file_types;
-// }
-// add_action( 'upload_mimes', 'add_file_types_to_uploads' );
-
 /* ---------------------------------------
 jsとcssの設定
 --------------------------------------- */
@@ -235,50 +214,6 @@ if (!is_admin()) {
     }
     add_action('wp_enqueue_scripts', 'register_and_enqueue_assets', 10);
 }
-
-// if (!is_admin()) {
-//     function register_script() {
-//         wp_register_script('jquery_3.4.1', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), '3.4.1', true);
-//         wp_register_script('basic', get_template_directory_uri() . '/js/basic.js', array(), '1.0', true);
-//         wp_register_script('inquiry', get_template_directory_uri() . '/js/inquiry.js', array(), '1.0', true);
-//         wp_register_script('swiper', get_template_directory_uri() . '/js/swiper.min.js', array(), '5.3.6', true);
-//         wp_register_script('frontPageSetting', get_template_directory_uri() . '/js/frontPageSetting.js', array(), '5.3.6', true);
-//         wp_register_script('gsap', get_template_directory_uri() . '/js/gsap.min.js', array(), '3.12.4', true);
-//     }
-
-//     function add_script() {
-//         register_script();
-//         wp_deregister_script('jquery');
-//         wp_enqueue_script('jquery_3.4.1');
-//         wp_enqueue_script('basic');
-//         if (is_front_page() || is_home()) {
-//             wp_enqueue_script('inquiry');
-//             wp_enqueue_script('swiper');
-//             wp_enqueue_script('frontPageSetting');
-//             wp_enqueue_script('gsap');
-//         }
-//     }
-//     add_action('wp_enqueue_scripts', 'add_script', 10);
-
-//     function register_styles() {
-//         wp_register_style('destyle', get_template_directory_uri() . '/css/destyle.css', array(), '1.0', 'all');
-//         wp_register_style('style', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
-//     }
-
-//     function add_styles() {
-//         register_styles();
-//         wp_enqueue_style('destyle');
-//         wp_enqueue_style('style');
-//         if (is_front_page() || is_home()) {
-//             wp_register_style('swiper', get_template_directory_uri() . '/css/swiper.min.css', array(), '5.3.6', 'all');
-//             wp_enqueue_style('swiper');
-//         }
-//     }
-//     add_action('wp_enqueue_scripts', 'add_styles', 10);
-// }
-
-
-
 
 /* ---------------------------------------
 メール送信

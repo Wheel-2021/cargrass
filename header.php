@@ -28,15 +28,23 @@
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#171819">
+  <!-- <?php if( is_home() || is_front_page() ): ?>
   <meta name="description" content="<?php bloginfo('description'); ?>">
+  <meta property="og:description" content="<?php bloginfo('description'); ?>">
+  <?php elseif( is_singular() ): ?>
+  <meta name="description" content="<?php echo mb_substr(get_the_excerpt(), 0, 100) ?>">
+  <meta property="og:description" content="<?php echo mb_substr(get_the_excerpt(), 0, 100); ?>">
+  <?php endif; ?>
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cargrass.jp">
+  <meta property="og:title" content="<?php wp_title('|', true, 'right'); ?>">
+  <meta property="og:image" content="<?php echo esc_url(get_template_directory_uri()); ?>/images/ogp-image.jpg"> -->
 
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
   <link rel="apple-touch-icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/images/apple-touch-icon-180.png">
   <link rel="icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="<?php echo esc_url( get_template_directory_uri() ); ?>/manifest.webmanifest">
-
-  <!-- <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); echo '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>" crossorigin="anonymous" media="all" /> -->
-
   <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Roboto:wght@100;400;700&&display=swap" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" fetchpriority="high" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Roboto:wght@100;400;700&&display=swap" />
