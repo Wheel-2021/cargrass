@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+
+/* リスト　*/
+.single-content-area ul, .single-content-area ol { margin-bottom: 2em; padding-left: 1em; list-style-type: disc;}
+.single-content-area ul li, .single-content-area ol li { margin-bottom: 0.2em; }
+
+@media screen and (max-width: 640px) {
+.single-content-area ul, .single-content-area ol { font-size: 1.0rem; line-height: 1.6;}
+} 
+@media screen and (min-width: 641px) {
+.single-content-area ul, .single-content-area ol { font-size: 1.1rem; line-height: 2.0;}
+} 
+
+/* 引用系　*/
+.single-content-area pre { margin-bottom: 2em; background: #f5f6f7; border: solid 1px #ddd; padding: 15px; }
+
+@media screen and (max-width: 640px) {
+.single-content-area pre { font-size: 1.0rem; line-height: 1.6;}
+} 
+@media screen and (min-width: 641px) {
+.single-content-area pre { font-size: 1.1rem; line-height: 2.0;}
+} 
+
+.wp-block-pullquote { margin: 0 auto 2em; text-align: center; }
+.single-content-area blockquote { position: relative; background: #f5f6f7; border: solid 1px #ddd; padding: 1.2em; }
+.single-content-area blockquote::before, .single-content-area blockquote::after { position: absolute; color: #c8c8c8; font-family: serif; font-size: 3em; line-height: 1.1;}
+.single-content-area blockquote::before { content: "“"; top:0; left: 10px; }
+.single-content-area blockquote::after { content: "”"; bottom:0; right: 10px; line-height: 1.1; }
+.single-content-area blockquote p { margin-bottom: 0!important; }
+
+@media screen and (max-width: 640px) {
+.single-content-area blockquote p { font-size: 1.0rem; line-height: 1.6;}
+} 
+@media screen and (min-width: 641px) {
+.single-content-area blockquote p { font-size: 1.1rem; line-height: 2.0;}
+} 
+
+pre.wp-block-verse { white-space: pre-wrap; overflow: auto; }
+
+
+/* テーブル　*/
+.single-content-area figure.wp-block-table { display: block; width: 100%; margin-bottom: 2em;}
+.single-content-area figure.wp-block-table table { border-collapse: collapse; }
+.single-content-area figure.wp-block-table table th, .single-content-area figure.wp-block-table table td { padding: 10px; border: solid 1px #ddd; line-height: 1.6;}
+
+@media screen and (max-width: 640px) {
+.single-content-area figure.wp-block-table table th, .single-content-area figure.wp-block-table table td { font-size: 1.0rem; }
+} 
+@media screen and (min-width: 641px) {
+.single-content-area figure.wp-block-table table th, .single-content-area figure.wp-block-table table td { font-size: 1.1rem;}
+} 
+
+/* カレンダー　*/
+#wp-calendar { width: 100%; margin-bottom: 1em; border-collapse: collapse; border-top: solid 1px #ddd; border-right: solid 1px #ddd; }
+#wp-calendar caption { margin-bottom: 1em; font-weight: bold; text-align: center; }
+#wp-calendar #today { background-color: #ffe6b2; }
+#wp-calendar #today a { background-color: #ffe6b2; }
+#wp-calendar #today a:hover { background-color: #ffd67e; }
+#wp-calendar tr:nth-of-type(2n+1) { background-color: transparent; }
+#wp-calendar th, #wp-calendar td { padding: 0; text-align: center; border-bottom: solid 1px #ddd; border-left: solid 1px #ddd;}
+#wp-calendar td a { display: block; background: #ffface; color: #333; }
+#wp-calendar td a:hover { background: #fff69b; }
+
+@media screen and (max-width: 640px) {
+#wp-calendar caption, .wp-block-calendar a { font-size: 1.0rem; }
+#wp-calendar th, #wp-calendar td, #wp-calendar td a { font-size: 1.2rem; line-height: 1.6;} 
+ 
+} 
+@media screen and (min-width: 641px) {
+#wp-calendar caption, .wp-block-calendar a { font-size: 1.1rem;}
+#wp-calendar th, #wp-calendar td, #wp-calendar td a { font-size: 1.5rem; line-height: 1.6;} 
+} 
+
+/* media */
+.wp-block-media-text { margin-bottom: 3em; }
+
+/* iframe */
+/*.wp-block-embed__wrapper{ position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+.wp-block-embed__wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }*/
