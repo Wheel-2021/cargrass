@@ -1,6 +1,13 @@
 
   <?php
-    $page_id = 78;
+    if (strpos($_SERVER['HTTP_HOST'], 'local') !== false) {
+      $page_id = 78;
+    } elseif (strpos($_SERVER['HTTP_HOST'], 'cargrass') !== false) {
+        $page_id = 218;
+    } else {
+        $page_id = 218;
+    }
+
     $company_name = get_field_object('company_name', $page_id);
     $company_hour = get_field_object('company_hour', $page_id);
     $company_phone = get_field_object('company_phone', $page_id);

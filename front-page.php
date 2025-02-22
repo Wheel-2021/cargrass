@@ -173,7 +173,7 @@
                 $posts = get_posts( $args ); ?>
 
                 <?php if ( empty( $posts ) ): // 記事がない場合の処理 ?>
-                  <p>ニュースがまだありません。</p>;
+                  <p>ニュースがまだありません。</p>
                 <?php else: ?>
 
                 <?php foreach ( $posts as $post ): // ループの開始
@@ -250,7 +250,7 @@
                     </p>
                     <?php endif ?>
 
-                    <a href="#" class="btn__big normal pc" aria-label="車両問い合わせページへ">
+                    <a href="<?php echo esc_url( home_url('/inquiry-automobile/') ); ?> " class="btn__big normal pc" aria-label="車両問い合わせページへ">
                       車両問い合わせ
                     </a>
                   </div>
@@ -261,7 +261,7 @@
                     </figure>
                     <?php endif ?>
 
-                    <a href="#" class="btn__big normal sp" aria-label="車両問い合わせページへ">
+                    <a href="<?php echo esc_url( home_url('/inquiry-automobile/') ); ?>" class="btn__big normal sp" aria-label="車両問い合わせページへ">
                       車両問い合わせ
                     </a>
                   </div>

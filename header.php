@@ -6,6 +6,15 @@
   <head prefix="og:http://ogp.me/ns# fb:http://ogp.me/ns/fb# website:http://ogp.me/ns/article#">
 <?php endif; ?>
 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q1FXCFDXYY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q1FXCFDXYY');
+  </script>
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>
@@ -56,7 +65,14 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
   <?php
-    $page_id = 78;
+  if (strpos($_SERVER['HTTP_HOST'], 'local') !== false) {
+      $page_id = 78;
+  } elseif (strpos($_SERVER['HTTP_HOST'], 'cargrass') !== false) {
+      $page_id = 218;
+  } else {
+      $page_id = 218;
+  }
+
     $company_name = get_field_object('company_name', $page_id);
     $company_hour = get_field_object('company_hour', $page_id);
     $company_phone = get_field_object('company_phone', $page_id);

@@ -9,6 +9,13 @@
     gNaviBtn.classList.toggle('is-active')
     menuWrap.classList.toggle('is-active')
   })
+  const gNaviAnchors = document.querySelectorAll("#menu-sp-global .menu-item a")
+  gNaviAnchors.forEach((item) => {
+    item.addEventListener("click", () => {
+    gNaviBtn.classList.remove('is-active')
+    menuWrap.classList.remove('is-active')
+    })
+  })
 }
 
 // scroll hide show

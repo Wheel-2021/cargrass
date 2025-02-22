@@ -22,10 +22,5 @@
         disableOnInteraction: false,
       },
     })
-    // const textItems = document.querySelectorAll('.garagePhotos')
-    // textItems.forEach((textArray) => {
-    // const copySelf = textArray.cloneNode(true)
-    // textArray.parentElement.append(copySelf)
-    // })
   })
 }

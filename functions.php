@@ -250,8 +250,8 @@ function mail_inquiry() {
       mb_language('uni');
       mb_internal_encoding('UTF-8');
 
-      $toAdmin = 'muguruma@sixwheel.net';
-      $noReply = 'no-reply@cargrass.jp';
+      $toAdmin = 'customer@cargrass.jp';
+      $noReply = 'customer@cargrass.jp';
       $fromName = mb_encode_mimeheader('GRASS' , 'UTF-8');
       $header = 'MIME-Version: 1.0 \n';
       $header .= 'Content-Type: text/plain; charset=UTF-8 \n';
