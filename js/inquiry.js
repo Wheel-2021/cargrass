@@ -228,7 +228,7 @@
 
     fd.append('action', 'mail_inquiry')
 
-    fetch('/wp-admin/admin-ajax.php', {
+    fetch('/homepage/wp-admin/admin-ajax.php', {
       method: 'POST',
       mode: 'cors',
       body: fd

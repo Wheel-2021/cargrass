@@ -88,7 +88,7 @@
 
                   <dl class="news__list">
                     <dt class="newsList__date"><time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time></dt>
-                    <dd class="newsList__ttl"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dd>
+                    <dd class="newsList__ttl"><a href="<?php the_permalink(); ?>" class="normalLink"><?php the_title(); ?></a></dd>
                     <dd class="newsList__btn"><a href="<?php the_permalink(); ?>" class="btn__small black" aria-label="ニュース詳細へ">読む</a></dd>
                   </dl>
 

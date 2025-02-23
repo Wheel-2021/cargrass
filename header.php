@@ -19,28 +19,69 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>
     <?php
-    global $page, $paged;
-    if(is_home() || is_front_page()) : //トップページ
-      bloginfo('name');
-    elseif(is_404()): //404ページ
-      echo '404 |';
-      bloginfo('name');
-    else:
-      wp_title('|', true, 'right');
-    endif;
+      global $page, $paged;
+      if(is_front_page()) :
+          bloginfo('name');
+      elseif(is_404()):
+          echo '404 |';
+          bloginfo('name');
+      elseif(is_single()):
+          single_post_title();
+          echo ' | ';
+          bloginfo('name');
+      elseif(is_page()):
+          single_post_title('');
+          echo ' | ';
+          bloginfo('name');
+      elseif(is_category()):
+          single_cat_title();
+          echo ' | ';
+          bloginfo('name');
+      elseif(is_tag()):
+          single_tag_title();
+          echo ' | ';
+          bloginfo('name');
+      elseif(is_author()):
+          printf('Author: %s | ', get_the_author());
+          bloginfo('name');
+      elseif(is_year()):
+          printf('Yearly Archives: %s | ', get_the_date('Y'));
+          bloginfo('name');
+      elseif(is_month()):
+          printf('Monthly Archives: %s | ', get_the_date('F Y'));
+          bloginfo('name');
+      elseif(is_day()):
+          printf('Daily Archives: %s | ', get_the_date());
+          bloginfo('name');
+      elseif(is_search()):
+          printf('Search Results for: %s | ', get_search_query());
+          bloginfo('name');
+      elseif(is_post_type_archive()):
+          post_type_archive_title();
+          echo ' | ';
+          bloginfo('name');
+      elseif(is_tax()):
+          single_term_title();
+          echo ' | ';
+          bloginfo('name');
+      else:
+          wp_title('|', true, 'right');
+          bloginfo('name');
+      endif;
 
-    if($paged >= 2 || $page >= 2) : //２ページ目以降の場合
-      echo '-' . sprintf('%sページ',
-      max($paged,$page));
-    endif;
-    ?>
+      if($paged >= 2 || $page >= 2) :
+          echo ' - ' . sprintf('%sページ', max($paged, $page));
+      endif;
+      ?>
   </title>
+
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#171819">
-  <!-- <?php if( is_home() || is_front_page() ): ?>
+  <?php if(is_front_page() ): ?>
   <meta name="description" content="<?php bloginfo('description'); ?>">
   <meta property="og:description" content="<?php bloginfo('description'); ?>">
-  <?php elseif( is_singular() ): ?>
+  <?php elseif( is_singular() || is_home() ): ?>
   <meta name="description" content="<?php echo mb_substr(get_the_excerpt(), 0, 100) ?>">
   <meta property="og:description" content="<?php echo mb_substr(get_the_excerpt(), 0, 100); ?>">
   <?php endif; ?>
@@ -48,7 +89,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cargrass.jp">
   <meta property="og:title" content="<?php wp_title('|', true, 'right'); ?>">
-  <meta property="og:image" content="<?php echo esc_url(get_template_directory_uri()); ?>/images/ogp-image.jpg"> -->
+  <meta property="og:image" content="<?php echo esc_url(get_template_directory_uri()); ?>/images/ogp-image.png">
 
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
   <link rel="apple-touch-icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/images/apple-touch-icon-180.png">

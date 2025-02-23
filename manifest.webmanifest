@@ -3,8 +3,8 @@
   "name":"有限会社グラス",
   "short_name":"GRASS",
   "icons": [
-    { "src": "https://cargrass.jp/wp-content/themes/prixfixe/images/icon-192.png", "type": "image/png", "sizes": "192x192", "purpose": "any maskable" },
-    { "src": "https://cargrass.jp/wp-content/themes/prixfixe/images/icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "any maskable" }
+    { "src": "https://cargrass.jp/homepage/wp-content/themes/cargrass/images/icon-192.png", "type": "image/png", "sizes": "192x192", "purpose": "any maskable" },
+    { "src": "https://cargrass.jp/homepage/wp-content/themes/cargrass/images/icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "any maskable" }
   ],
   "start_url": "https://cargrass.jp/",
   "theme_color":"#F7F4F0",

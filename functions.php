@@ -1,6 +1,10 @@
 <?php
 add_theme_support( 'automatic-feed-links' );
-add_theme_support( 'title-tag' );
+
+// function my_theme_setup() {
+//     add_theme_support('title-tag');
+// }
+// add_action('after_setup_theme', 'my_theme_setup');
 
 /* ---------------------------------------
 セキュリティ ヘッダー掃除
@@ -186,7 +190,7 @@ jsとcssの設定
 if (!is_admin()) {
     function register_and_enqueue_assets() {
         // スクリプトの登録
-        wp_register_script('jquery_3.4.1', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), '3.4.1', true);
+        // wp_register_script('jquery_3.4.1', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), '3.4.1', true);
         wp_register_script('basic', get_template_directory_uri() . '/js/basic.js', array(), '1.0', true);
         wp_register_script('inquiry', get_template_directory_uri() . '/js/inquiry.js', array(), '1.0', true);
         wp_register_script('swiper', get_template_directory_uri() . '/js/swiper.min.js', array(), '5.3.6', true);
@@ -199,13 +203,13 @@ if (!is_admin()) {
         wp_register_style('swiper', get_template_directory_uri() . '/css/swiper.min.css', array(), '5.3.6', 'all');
 
         // スクリプトとスタイルの読み込み
-        wp_deregister_script('jquery');
-        wp_enqueue_script('jquery_3.4.1');
+        // wp_deregister_script('jquery');
+        // wp_enqueue_script('jquery_3.4.1');
         wp_enqueue_script('basic');
-        if (is_front_page() || is_home()) {
-            wp_enqueue_script('inquiry');
-            wp_enqueue_script('swiper');
+        if (is_front_page()) {
             wp_enqueue_script('frontPageSetting');
+            wp_enqueue_script('swiper');
+            wp_enqueue_script('inquiry');
             wp_enqueue_script('gsap');
             wp_enqueue_style('swiper');
         }
