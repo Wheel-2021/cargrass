@@ -79,7 +79,6 @@
                     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                     $args = array(
                     'post_type'      => array('post'),
-                    'posts_per_page' => -1,
                     'paged' => $paged );
                     $wp_query = new WP_Query( $args );
                   ?>
@@ -96,6 +95,15 @@
                   <?php else : ?>
                   <p class="text">まだ記事はありません。</p>
                   <?php endif; wp_reset_query(); ?>
+
+
+                  <?php the_posts_pagination(
+                      array(
+                          'mid_size'      => 2,
+                          'prev_next'     => false,
+                          'type'          => 'list',
+                      )
+                  ); ?>
                 </div>
               </div>
             </div>

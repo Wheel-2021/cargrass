@@ -561,7 +561,7 @@
                 </dl>
                 <h3 class="mainTtl"><?php echo $company_title_2["value"]; ?></h3>
                 <div class="map">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d728.6710315960813!2d141.43421036650963!3d43.06911057113587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f150.1!3m3!1m2!1s0x5f0b2d2b7ceb5977%3A0x6f68d7c9ae03fe82!2z5pyJ6ZmQ5Lya56S-44Kw44Op44K5!5e0!3m2!1sja!2sjp!4v1740014746497!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  <iframe title="googleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d728.6710315960813!2d141.43421036650963!3d43.06911057113587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f150.1!3m3!1m2!1s0x5f0b2d2b7ceb5977%3A0x6f68d7c9ae03fe82!2z5pyJ6ZmQ5Lya56S-44Kw44Op44K5!5e0!3m2!1sja!2sjp!4v1740014746497!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
               </div>
             </div>
@@ -615,6 +615,7 @@
                           <select id="item" class="form__input--item form__option--select form__item">
                             <option value="">該当項目を選択してください</option>
                             <option value="中古車販売について">中古車販売について</option>
+                            <option value="整備工場について">整備工場について</option>
                             <option value="当社への営業">当社への営業</option>
                             <option value="採用について">採用について</option>
                             <option value="その他">その他</option>

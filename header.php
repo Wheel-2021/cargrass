@@ -70,7 +70,7 @@
       endif;
 
       if($paged >= 2 || $page >= 2) :
-          echo ' - ' . sprintf('%sページ', max($paged, $page));
+          echo ' - ' . sprintf('%sページ目', max($paged, $page));
       endif;
       ?>
   </title>
@@ -88,7 +88,63 @@
   <meta property="og:locale" content="ja_JP">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cargrass.jp">
-  <meta property="og:title" content="<?php wp_title('|', true, 'right'); ?>">
+  <meta property="og:title" content="
+  <?php
+      global $page, $paged;
+      if(is_front_page()) :
+          bloginfo('name');
+      elseif(is_404()):
+          echo '404 |';
+          bloginfo('name');
+      elseif(is_single()):
+          single_post_title();
+          echo ' | ';
+          bloginfo('name');
+      elseif(is_page()):
+          single_post_title('');
+          echo ' | ';
+          bloginfo('name');
+      elseif(is_category()):
+          single_cat_title();
+          echo ' | ';
+          bloginfo('name');
+      elseif(is_tag()):
+          single_tag_title();
+          echo ' | ';
+          bloginfo('name');
+      elseif(is_author()):
+          printf('Author: %s | ', get_the_author());
+          bloginfo('name');
+      elseif(is_year()):
+          printf('Yearly Archives: %s | ', get_the_date('Y'));
+          bloginfo('name');
+      elseif(is_month()):
+          printf('Monthly Archives: %s | ', get_the_date('F Y'));
+          bloginfo('name');
+      elseif(is_day()):
+          printf('Daily Archives: %s | ', get_the_date());
+          bloginfo('name');
+      elseif(is_search()):
+          printf('Search Results for: %s | ', get_search_query());
+          bloginfo('name');
+      elseif(is_post_type_archive()):
+          post_type_archive_title();
+          echo ' | ';
+          bloginfo('name');
+      elseif(is_tax()):
+          single_term_title();
+          echo ' | ';
+          bloginfo('name');
+      else:
+          wp_title('|', true, 'right');
+          bloginfo('name');
+      endif;
+
+      if($paged >= 2 || $page >= 2) :
+          echo ' - ' . sprintf('%sページ目', max($paged, $page));
+      endif;
+      ?>
+  ">
   <meta property="og:image" content="<?php echo esc_url(get_template_directory_uri()); ?>/images/ogp-image.png">
 
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
