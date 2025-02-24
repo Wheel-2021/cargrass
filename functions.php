@@ -7,6 +7,12 @@ add_theme_support( 'automatic-feed-links' );
 // add_action('after_setup_theme', 'my_theme_setup');
 
 /* ---------------------------------------
+XMLサイトマップ無効化
+--------------------------------------- */
+// add_filter( 'wp_sitemaps_enabled', '__return_false' );
+// remove_action( 'init', 'wp_sitemaps_get_server' );
+
+/* ---------------------------------------
 セキュリティ ヘッダー掃除
 --------------------------------------- */
 function remove_wp_head_actions() {

@@ -226,7 +226,7 @@
       <div class="headerLogo">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>"  class="headerLogo__link" aria-label="ホームへ">
           <figure class="headerLogo__img">
-            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.svg" alt="<?php bloginfo('name'); ?>" />
+            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.svg" width="200" height="33" alt="<?php bloginfo('name'); ?>" />
           </figure>
         </a>
       </div>
@@ -309,7 +309,7 @@
                 <a href="<?php echo $sales_url_1["value"]; ?>" target="_blank" aria-label="<?php echo $sales_alt_1["value"]; ?>ページへ">
                   <?php if($sales_image_1): ?>
                   <figure class="website">
-                    <img src="<?php echo $sales_image_1["value"]; ?>" alt="<?php echo $sales_alt_1["value"]; ?>" class="website__icon" />
+                    <img src="<?php echo $sales_image_1["value"]; ?>" alt="<?php echo $sales_alt_1["value"]; ?>" width="124" height="46" class="website__icon" />
                   </figure>
                   <?php else: ?>
                     <?php echo $sales_alt_1["value"]; ?>
@@ -323,7 +323,7 @@
                 <a href="<?php echo $sales_url_2["value"]; ?>" target="_blank" aria-label="<?php echo $sales_alt_2["value"]; ?>ページへ">
                   <?php if($sales_image_2): ?>
                   <figure class="website">
-                    <img src="<?php echo $sales_image_2["value"]; ?>" alt="<?php echo $sales_alt_2["value"]; ?>" class="website__icon" />
+                    <img src="<?php echo $sales_image_2["value"]; ?>" alt="<?php echo $sales_alt_2["value"]; ?>" width="124" height="19" class="website__icon" />
                   </figure>
                   <?php else: ?>
                     <?php echo $sales_alt_2["value"]; ?>
@@ -337,7 +337,7 @@
                 <a href="<?php echo $sales_url_3["value"]; ?>" target="_blank" aria-label="<?php echo $sales_alt_3["value"]; ?>ページへ">
                   <?php if($sales_image_3): ?>
                   <figure class="website">
-                    <img src="<?php echo $sales_image_3["value"]; ?>" alt="<?php echo $sales_alt_3["value"]; ?>" class="website__icon" />
+                    <img src="<?php echo $sales_image_3["value"]; ?>" alt="<?php echo $sales_alt_3["value"]; ?>" width="124" height="26" class="website__icon" />
                   </figure>
                   <?php else: ?>
                     <?php echo $sales_alt_3["value"]; ?>

@@ -5863,6 +5863,12 @@ body .contentsArea .contents__base .contents__base--inner .contentsBase__wrap .c
 .subPage .subPage__wrap .content .wsp-container .wsp-pages-list:last-of-type {
   margin-bottom: 0;
 }
+.subPage .subPage__wrap .content .wsp-container .wsp-posts-list {
+  list-style-type: disc;
+}
+.subPage .subPage__wrap .content .wsp-container .wsp-posts-list:last-of-type {
+  margin-bottom: 0;
+}
 .subPage .subPage__wrap .content .pagination {
   margin-top: 2em;
 }
@@ -5923,6 +5929,27 @@ body .contentsArea .contents__base .contents__base--inner .contentsBase__wrap .c
     width: 2em;
     height: 2em;
   }
+  .subPage .subPage__wrap .content .wsp-container .wsp-pages-list {
+    list-style-type: disc;
+  }
+  .subPage .subPage__wrap .content .wsp-container .wsp-pages-list .page_item {
+    margin-bottom: 0.5em;
+  }
+  .subPage .subPage__wrap .content .wsp-container .wsp-pages-list .page_item a {
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #6B6B6B;
+    transition: all 0.3s ease;
+  }
+  .subPage .subPage__wrap .content .wsp-container .wsp-posts-list .wsp-post {
+    margin-bottom: 0.5em;
+  }
+  .subPage .subPage__wrap .content .wsp-container .wsp-posts-list .wsp-post a {
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #6B6B6B;
+    transition: all 0.3s ease;
+  }
   .subPage .subPage__wrap .contents__base .contents__base--inner .contentsBase__wrap .contents__wrap .contents__left .subBox {
     display: flex;
     justify-content: space-between;
@@ -5960,6 +5987,19 @@ body .contentsArea .contents__base .contents__base--inner .contentsBase__wrap .c
     transition: all 0.3s ease;
   }
   .subPage .subPage__wrap .content .wsp-container .wsp-pages-list .page_item a:hover {
+    border-bottom: 0;
+    color: #D34D18;
+  }
+  .subPage .subPage__wrap .content .wsp-container .wsp-posts-list .wsp-post {
+    margin-bottom: 0.5em;
+  }
+  .subPage .subPage__wrap .content .wsp-container .wsp-posts-list .wsp-post a {
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #6B6B6B;
+    transition: all 0.3s ease;
+  }
+  .subPage .subPage__wrap .content .wsp-container .wsp-posts-list .wsp-post a:hover {
     border-bottom: 0;
     color: #D34D18;
   }
