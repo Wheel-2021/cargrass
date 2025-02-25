@@ -5620,8 +5620,8 @@ body .contentsArea .contents__base .contents__base--inner .contentsBase__wrap .c
     margin-right: -1.5em;
   }
   .topPage .topPage__wrap .garage .contents__base--inner .contentsBase__wrap .photosBox .garagePhotos .garagePhotos__item .garagePhotoItem__wrap .garagePhoto {
-    width: 113px;
-    height: 75px;
+    width: 226px;
+    height: 150px;
   }
   .topPage .topPage__wrap .company .contents__base--inner .contentsBase__wrap .contents__wrap .contents__right .comapnyData {
     margin: 3em 0;
@@ -5854,6 +5854,9 @@ body .contentsArea .contents__base .contents__base--inner .contentsBase__wrap .c
   list-style-type: disc;
 }
 .subPage .subPage__wrap .content ul.pp__list li {
+  margin-left: 1em;
+}
+.subPage .subPage__wrap .content .wsp-container {
   margin-left: 1em;
 }
 .subPage .subPage__wrap .content .wsp-container .wsp-pages-list {
