@@ -69,7 +69,7 @@
                     } elseif (is_author()) {
                         echo "投稿者：" . esc_html(get_queried_object()->display_name);
                     } else {
-                        echo "投稿";
+                        echo "ニュース";
                     }
                   ?>
                   一覧
@@ -94,7 +94,7 @@
 
                   <?php endwhile; wp_reset_postdata(); ?>
                   <?php else : ?>
-                  <p class="text">まだ記事はありません。</p>
+                  <p class="text">まだニュースはありません。</p>
                   <?php endif; wp_reset_query(); ?>
                 </div>
               </div>

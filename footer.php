@@ -82,7 +82,7 @@
         </div>
       </div>
       <div class="footerLower">
-        <p class="copyright">© 2025 GRASS.Inc</p>
+        <p class="copyright">© 2025 GRASS Inc.</p>
         <div class="subMenu pc">
         <?php wp_nav_menu(array(
           'theme_location'  => 'footerSub',

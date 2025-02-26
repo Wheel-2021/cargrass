@@ -614,8 +614,8 @@
                         <dd class="form__input">
                           <select id="item" class="form__input--item form__option--select form__item">
                             <option value="">該当項目を選択してください</option>
-                            <option value="中古車販売について">中古車販売について</option>
-                            <option value="整備工場について">整備工場について</option>
+                            <option value="販売部門について">販売部門について</option>
+                            <option value="整備部門について">整備部門について</option>
                             <option value="当社への営業">当社への営業</option>
                             <option value="採用について">採用について</option>
                             <option value="その他">その他</option>
